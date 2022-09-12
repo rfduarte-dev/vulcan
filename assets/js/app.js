@@ -36,7 +36,6 @@ accordion.forEach((target) => {
   })
 })
 
-// Scroll Reveal
 // ScrollReveal ===================
 const slideTop = {
   mobile: true,
@@ -109,3 +108,20 @@ ScrollReveal().reveal('#services .services__container', slideBotton)
 ScrollReveal().reveal('#services .btn__dark', slideBotton)
 ScrollReveal().reveal('#contact .contact__info', slideleft)
 ScrollReveal().reveal('#contact .contact__form', slideright)
+
+// Menu Mobile
+const menuMobileBtn = document.querySelector('.mobile__menu')
+const menuLinks = document.querySelector('.nav__links')
+const links = document.querySelectorAll('.nav__links li ')
+
+menuMobileBtn.addEventListener('click', () => {
+  menuLinks.classList.toggle('active')
+  menuMobileBtn.classList.toggle('active')
+})
+
+links.forEach((link) => {
+  link.addEventListener('click', () => {
+    menuLinks.classList.remove('active')
+    menuMobileBtn.classList.remove('active')
+  })
+})
