@@ -35,3 +35,77 @@ accordion.forEach((target) => {
     }
   })
 })
+
+// Scroll Reveal
+// ScrollReveal ===================
+const slideTop = {
+  mobile: true,
+  delay: 250,
+  duration: 750,
+  reset: true,
+  origin: 'top',
+  distance: '100px',
+  easing: 'cubic-bezier(.53,-0.23,.4,1.26)',
+  viewOffset: {
+    top: 0,
+    right: 0,
+    bottom: 0,
+    left: 0
+  }
+}
+const slideBotton = {
+  mobile: true,
+  delay: 250,
+  duration: 750,
+  reset: true,
+  origin: 'bottom',
+  distance: '100px',
+  easing: 'cubic-bezier(.53,-0.23,.4,1.26)',
+  viewOffset: {
+    top: 100,
+    right: 0,
+    bottom: 0,
+    left: 0
+  }
+}
+const slideleft = {
+  mobile: true,
+  delay: 250,
+  duration: 750,
+  reset: true,
+  origin: 'left',
+  distance: '100px',
+  easing: 'cubic-bezier(.53,-0.23,.4,1.26)',
+  viewOffset: {
+    top: 100,
+    right: 0,
+    bottom: 0,
+    left: 0
+  }
+}
+const slideright = {
+  mobile: true,
+  delay: 250,
+  duration: 750,
+  reset: true,
+  origin: 'rigt',
+  distance: '100px',
+  easing: 'cubic-bezier(.53,-0.23,.4,1.26)',
+  viewOffset: {
+    top: 100,
+    right: 0,
+    bottom: 0,
+    left: 0
+  }
+}
+
+ScrollReveal().reveal('#home .container', slideleft)
+ScrollReveal().reveal('#info .tittle', slideTop)
+ScrollReveal().reveal('.info__container', slideBotton)
+ScrollReveal().reveal('.about__img', slideleft)
+ScrollReveal().reveal('.about__info', slideright)
+ScrollReveal().reveal('#services .tittle', slideTop)
+ScrollReveal().reveal('#services .services__container', slideBotton)
+ScrollReveal().reveal('#services .btn__dark', slideBotton)
+ScrollReveal().reveal('#contact .contact__info', slideleft)
+ScrollReveal().reveal('#contact .contact__form', slideright)

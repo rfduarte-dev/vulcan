@@ -24,6 +24,11 @@
     <title>Vulcan • Gerenciamento de dados Escolares</title>
   </head>
   <body>
+    <!-- GotoTop -->
+    <div class="btn__top">
+      <a href="#home"><i class="uil uil-angle-up"></i></a>
+    </div>
+
     <!-- Navbar -->
     <header class="">
       <nav class="container">
@@ -40,6 +45,24 @@
         </nav>
       </nav>
     </header>
+
+    <!-- Menu Mobile -->
+    <div class="menu__mobile">
+      <div class="menu__mobile-btn"></div>
+      <nav>
+        <div class="nav__logo">
+          <!-- Logo here -->
+        </div>
+        <nav>
+          <ul class="nav__links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#services">Serviços</a></li>
+            <li><a href="#contact">Contato</a></li>
+          </ul>
+        </nav>
+      </nav>
+    </div>
 
     <!-- Home -->
     <section id="home">
@@ -120,15 +143,17 @@
       <div class="container">
         <div class="tittle">
           <h1>Conheça nossos serviços</h1>
+          <p>
+            Oferecemos o sistema de suporte integrado, onde determinados dados
+            sensíveis para os programas de gerenciamento e processamento de
+            dados, serão tratados exclusivamente pela equipe Vulcan. Adicionar
+            novos alunos, retirar e salvar os dados de alunos que cancelaram
+            matrícula, inserção de faltas abonadas e demais ocorrências são
+            responsabilidades da nossa equipe que prontamente irá sanar a
+            demanda da escola.
+          </p>
         </div>
-        <p>
-          Oferecemos o sistema de suporte integrado, onde determinados dados
-          sensíveis para os programas de gerenciamento e processamento de dados,
-          serão tratados exclusivamente pela equipe Vulcan. Adicionar novos
-          alunos, retirar e salvar os dados de alunos que cancelaram matrícula,
-          inserção de faltas abonadas e demais ocorrências são responsabilidades
-          da nossa equipe que prontamente irá sanar a demanda da escola.
-        </p>
+
         <div class="services__container">
           <div class="accordion">
             <div class="accordion__header">
@@ -267,6 +292,9 @@
       </div>
     </section>
 
+    <!-- ScrollReveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Script -->
     <script src="./assets/js/app.js"></script>
   </body>
 </html>
