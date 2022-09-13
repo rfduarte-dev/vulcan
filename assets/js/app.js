@@ -1,17 +1,21 @@
 // Scroll Navbar
 const navBar = document.querySelector('header')
 const navLogo = document.querySelector('.nav__logo')
+//Go to top
+const goToTop = document.querySelector('.btn__top')
 
 function scrolled() {
   if (window.pageYOffset > 0) {
+    goToTop.classList.add('active')
     navBar.classList.add('active')
     navLogo.innerHTML = ` 
-             <a href=""><img src="./assets/images/logo.png" alt="" /></a>
+             <a href="#home"><img src="./assets/images/logo.png" alt="" /></a>
     `
   } else {
+    goToTop.classList.remove('active')
     navBar.classList.remove('active')
     navLogo.innerHTML = ` 
-             <a href=""><img src="./assets/images/logoneg.png" alt="" /></a>
+             <a href="#home"><img src="./assets/images/logoneg.png" alt="" /></a>
 `
   }
 }
