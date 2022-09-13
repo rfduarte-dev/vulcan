@@ -363,11 +363,24 @@ section#home .tittle {
 }
 
 section#home .tittle h1 {
+  text-align: center;
   color: var(--light-color);
 }
 
 section#home .tittle span {
-  margin-bottom: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+section#home .btn__light {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+section#home .tittle::after {
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* Info */
@@ -552,6 +565,8 @@ section#contact
   .contact__higlight-card {
   width: 45%;
   font-size: 0.75rem;
+  text-align: center;
+  color: var(--primary-color);
   text-transform: uppercase;
   display: flex;
   margin-top: 1.5rem;
@@ -572,10 +587,7 @@ section#contact
   i {
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
-}
-
-section#contact .container .contact__info .contact__highlight li i {
-  color: #fff;
+  color: var(--light-color);
 }
 
 section#contact .container .contact__form {
@@ -674,7 +686,7 @@ footer a {
   /* Reutilizavel */
   .tittle h1 {
     font-size: 2rem;
-    line-height: 1.75rem;
+    line-height: 2rem;
     color: var(--dark-color);
   }
 
@@ -711,8 +723,12 @@ footer a {
 
   /* Home */
   section#home {
-    padding-top: 8rem;
+    padding-top: 0;
     justify-content: center;
+  }
+
+  section#home .btn__light {
+    text-align: center;
   }
 
   /* Info */

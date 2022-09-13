@@ -102,7 +102,7 @@ const slideright = {
   }
 }
 
-ScrollReveal().reveal('#home .container', slideleft)
+ScrollReveal().reveal('#home .container', slideTop)
 ScrollReveal().reveal('#info .tittle', slideTop)
 ScrollReveal().reveal('.info__container', slideBotton)
 ScrollReveal().reveal('.about__img', slideleft)
