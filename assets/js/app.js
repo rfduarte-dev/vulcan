@@ -168,7 +168,7 @@ form.addEventListener('submit', (e) => {
 
   loadForm.classList.add('load')
 
-  fetch('https://formsubmit.co/ajax/fabiofpauli@gmail.com', {
+  fetch('https://formsubmit.co/ajax/960428ad7b9c5966de6a6e5d704c4623', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
