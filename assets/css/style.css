@@ -60,6 +60,15 @@ p {
   }
 }
 
+@keyframes formLoad {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 /* Reutilizaveis */
 .container {
   width: 90%;
@@ -591,10 +600,37 @@ section#contact
 }
 
 section#contact .container .contact__form {
+  position: relative;
   padding: 2rem;
   background-color: #fff;
 }
+section#contact .container .contact__form .form__load {
+  display: none;
+}
 
+section#contact .container .contact__form .form__load.load {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--primary-color);
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 1;
+}
+
+section#contact .container .contact__form .form__load.load i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  animation: formLoad 2s infinite forwards linear;
+}
 section#contact .container .contact__form form {
   display: flex;
   gap: 1rem;

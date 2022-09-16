@@ -53,7 +53,7 @@
     <section id="home">
       <div class="container">
         <div class="tittle">
-          <h1>Gerenciamento de dados para <br/>uma educação de qualidade!</h1>
+          <h1>Gerenciamento de dados para <br />uma educação de qualidade!</h1>
           <span>Os dados de poucos colaboram para o futuro de muitos.</span>
         </div>
         <a href="#contact" class="btn__light">Agende uma reunião</a>
@@ -276,11 +276,40 @@
           </div>
         </div>
         <div class="contact__form">
-          <form action="">
-            <input type="text" name="" id="" placeholder="Nome" required />
-            <input type="text" name="" id="" placeholder="Escola" required />
-            <input type="email" name="" id="" placeholder="Email" required />
-            <textarea name="" id="" cols="30" rows="10"></textarea>
+          <form>
+            <div class="form__load">
+              <i class="uil uil-spinner"></i>
+              <p>enviando...</p>
+            </div>
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="box" />
+            <input
+              type="text"
+              name="nome"
+              id="form__name"
+              placeholder="Nome"
+              required
+            />
+            <input
+              type="text"
+              name="escola"
+              id="form__school"
+              placeholder="Escola"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              id="form__email"
+              placeholder="Email"
+              required
+            />
+            <textarea
+              name="mensagem"
+              id="form__msg"
+              cols="30"
+              rows="10"
+            ></textarea>
             <button type="submit">
               Enviar <i class="uil uil-message"></i>
             </button>

@@ -129,3 +129,66 @@ links.forEach((link) => {
     menuMobileBtn.classList.remove('active')
   })
 })
+
+// Form request
+const form = document.querySelector('.contact__form form')
+
+async function sendForm(nome, escola, email, msg, form) {
+  await fetch('https://formsubmit.co/ajax/fabiofpauli@gmail.com', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Accept: 'application/json'
+    },
+    body: JSON.stringify({
+      nome: nome,
+      escola: escola,
+      email: email,
+      mensagem: msg
+    })
+  })
+    .then(() => {
+      console.log('teste')
+      nome.innerHTML = ''
+      escola.innerHTML = ''
+      email.innerHTML = ''
+      msg.innerHTML = ''
+      form.classList.remove('load')
+    })
+    .catch((error) => console.log(error))
+}
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault()
+  const loadForm = document.querySelector('.form__load')
+  const formName = document.querySelector('#form__name')
+  const formSchool = document.querySelector('#form__school')
+  const formEmail = document.querySelector('#form__email')
+  const formMsg = document.querySelector('#form__msg')
+  console.log(formName)
+
+  loadForm.classList.add('load')
+
+  fetch('https://formsubmit.co/ajax/fabiofpauli@gmail.com', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Accept: 'application/json'
+    },
+    body: JSON.stringify({
+      nome: formName,
+      escola: formSchool,
+      email: formEmail,
+      mensagem: formMsg
+    })
+  })
+    .then(() => {
+      console.log('mensagem enviada')
+      formName.value = ''
+      formSchool.value = ''
+      formEmail.value = ''
+      formMsg.value = ''
+      loadForm.classList.remove('load')
+    })
+    .catch((error) => console.log(error))
+})
