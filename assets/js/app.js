@@ -165,7 +165,6 @@ form.addEventListener('submit', (e) => {
   const formSchool = document.querySelector('#form__school')
   const formEmail = document.querySelector('#form__email')
   const formMsg = document.querySelector('#form__msg')
-  console.log(formName)
 
   loadForm.classList.add('load')
 
