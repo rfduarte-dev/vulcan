@@ -167,21 +167,21 @@ form.addEventListener('submit', (e) => {
   const formMsg = document.querySelector('#form__msg')
 
   loadForm.classList.add('load')
-
-  fetch('https://formsubmit.co/ajax/960428ad7b9c5966de6a6e5d704c4623', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Accept: 'application/json'
-    },
-    body: JSON.stringify({
-      nome: formName,
-      escola: formSchool,
-      email: formEmail,
-      mensagem: formMsg
-    })
-  })
-    .then(() => {
+  
+  try {
+    fetch('https://formsubmit.co/ajax/960428ad7b9c5966de6a6e5d704c4623', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json'
+      },
+      body: JSON.stringify({
+        nome: formName,
+        escola: formSchool,
+        email: formEmail,
+        mensagem: formMsg
+      })
+    }).then(() => {
       console.log('mensagem enviada')
       formName.value = ''
       formSchool.value = ''
@@ -189,5 +189,7 @@ form.addEventListener('submit', (e) => {
       formMsg.value = ''
       loadForm.classList.remove('load')
     })
-    .catch((error) => console.log(error))
+  } catch {
+    ;(error) => console.log(error)
+  }
 })
