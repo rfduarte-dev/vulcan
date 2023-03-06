@@ -109,6 +109,7 @@ ScrollReveal().reveal('.about__img', slideleft)
 ScrollReveal().reveal('.about__info', slideright)
 ScrollReveal().reveal('#services .tittle', slideTop)
 ScrollReveal().reveal('#services .services__container', slideBotton)
+ScrollReveal().reveal('#services .video__container', slideTop)
 ScrollReveal().reveal('#services .btn__dark', slideBotton)
 ScrollReveal().reveal('#contact .contact__info', slideleft)
 ScrollReveal().reveal('#contact .contact__form', slideright)
@@ -193,4 +194,12 @@ form.addEventListener('submit', (e) => {
 	} catch {
 		;(error) => console.log(error)
 	}
+})
+
+//  Swipper
+const swiper = new Swiper('.mySwiper', {
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
 })

@@ -494,6 +494,20 @@ section#services .container .tittle::after {
 	transform: translateX(-50%);
 }
 
+section#services .container .video__container {
+	width: fit-content;
+	text-align: center;
+}
+
+section#services .container .video__container p {
+	margin-bottom: 1rem;
+}
+section#services .container .video__container iframe {
+	max-width: 100%;
+	min-height: 100%;
+	border-radius: 1.5rem;
+}
+
 section#services .container .services__container {
 	display: flex;
 	flex-wrap: wrap;

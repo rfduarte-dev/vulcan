@@ -21,6 +21,12 @@
 			type="image/svg"
 		/>
 
+		<!-- Swiper -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+		/>
+
 		<title>Vulcan • Gerenciamento de dados Escolares</title>
 	</head>
 	<body>
@@ -155,17 +161,66 @@
 						que prontamente irá sanar a demanda da escola.
 					</p>
 				</div>
+				<!-- Swiper dos Videos -->
 
-				<!-- Video Youtube -->
-				<iframe
-					width="960"
-					height="540"
-					src="https://www.youtube.com/embed/WoAEGe80b_I"
-					title="Vulcan - Planilha do Professor"
-					frameborder="0"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-					allowfullscreen
-				></iframe>
+				<div class="swiper mySwiper">
+					<div class="swiper-wrapper video__container">
+						<!-- Vulcan -->
+						<div class="swiper-slide">
+							<h2>A Vulcan</h2>
+							<p class="subtitle">Como a Vulcan funciona?</p>
+							<!-- Video Youtube -->
+							<iframe
+								width="960"
+								height="540"
+								src="https://www.youtube.com/embed/VHDtdgkfIcI"
+								title="YouTube video player"
+								frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+								allowfullscreen
+							></iframe>
+						</div>
+						<!-- Professor -->
+						<div class="swiper-slide">
+							<h2>Planilha do Professor</h2>
+							<p class="subtitle">
+								Conheça um pouco como funciona a planilha do
+								professor
+							</p>
+							<!-- Video Youtube -->
+							<iframe
+								width="960"
+								height="540"
+								src="https://www.youtube.com/embed/bwb7dxoX8Hw"
+								title="YouTube video player"
+								frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+								allowfullscreen
+							></iframe>
+						</div>
+						<!-- Dashboard -->
+						<div class="swiper-slide">
+							<h2>Dashboard da Coordenação</h2>
+							<p class="subtitle">
+								Saíba as diversas vantagens que o sistema
+								possui.
+							</p>
+							<!-- Video Youtube -->
+							<iframe
+								width="960"
+								height="540"
+								src="https://www.youtube.com/embed/7ADRXuoinBQ"
+								title="YouTube video player"
+								frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+								allowfullscreen
+							></iframe>
+						</div>
+					</div>
+
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
+				</div>
 
 				<div class="services__container">
 					<div class="accordion">
@@ -372,6 +427,10 @@
 
 		<!-- ScrollReveal -->
 		<script src="https://unpkg.com/scrollreveal"></script>
+
+		<!-- Swiper -->
+		<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
 		<!-- Script -->
 		<script src="./assets/js/app.js"></script>
 	</body>
